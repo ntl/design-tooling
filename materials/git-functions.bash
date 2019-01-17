@@ -196,6 +196,12 @@ git-branch-exists() {( set $settings
   git show-ref --quiet --verify refs/heads/$branch
 )}
 
+git-capture-tree-commit() {( set $settings
+  commit=$1
+
+  git show --quiet --format=%T $commit
+)}
+
 git-assure-nothing-staged() {(set $settings
   set +e
 

@@ -5,6 +5,11 @@ require 'fileutils'
 
 include FileUtils
 
+# Filter branch command:
+#
+# (With this script in $PATH):
+#     git filter-branch --tree-filter git-rename-project.rb --tag-name-filter cat
+
 def update
   puts <<~TEXT
   Renaming ANSIFormatting to TerminalOutput::Styling
