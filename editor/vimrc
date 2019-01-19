@@ -1,0 +1,67 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+call pathogen#infect()
+
+runtime plugin/matchit.vim
+
+set nobackup
+
+set splitbelow
+set splitright
+
+set autoindent
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set nowrap
+
+set number
+set ruler
+set spell spelllang=en_us
+
+set laststatus=2 " Always show status bar
+set statusline=  " Reset status bar
+
+set statusline+=%f%M\ " File name
+set statusline+=\[%{strlen(&ft)?&ft:'none'}] " File type
+set statusline+=%= " Remainder is right aligned
+set statusline+=\ b%-3.3n " Buffer number
+set statusline+=\ %-7(%l,%c%V%) " Line/character of cursor position
+
+syntax on
+let base16colorspace=256
+colorscheme base16-solarized-light
+
+let mapleader=","
+
+noremap <Esc>h :vertical resize -5<cr>
+noremap <Esc>j :resize +5<cr>
+noremap <Esc>k :resize -5<cr>
+noremap <Esc>l :vertical resize +5<cr>
+
+map <silent> <Up> gk
+map <silent> <Down> gj
+map <silent> <Left> h
+map <silent> <Right> l
+map <silent> <home> g<home>
+map <silent> <End> g<End>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+map <Leader>t :NERDTreeToggle<cr>
+
+command! -nargs=* -bar -complete=file TabnewLeft :execute (tabpagenr()-1).'tabnew '.<q-args>
+ca tabel TabnewLeft
+
+autocmd BufNewFile,BufRead COMMIT_EDITMSG set colorcolumn=50,72
+
+autocmd BufNewFile,BufRead *.adoc,*.md,*.txt set linebreak
+autocmd BufNewFile,BufRead *.adoc,*.md,*.txt set nonumber
+autocmd BufNewFile,BufRead *.adoc,*.md,*.txt set wrap
+autocmd BufNewFile,BufRead *.adoc,*.md,*.txt set spell
+
+autocmd BufNewFile,BufRead Vagrantfile,Procfile,Guardfile,Gemfile,gemspec,*.gemspec set filetype=ruby
+
