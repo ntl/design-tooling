@@ -14,6 +14,10 @@ set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set nowrap
+set nohlsearch
+set incsearch
+set noswapfile
+set wildmode=longest,list
 
 set number
 set ruler
@@ -38,6 +42,12 @@ noremap <Esc>h :vertical resize -5<cr>
 noremap <Esc>j :resize +5<cr>
 noremap <Esc>k :resize -5<cr>
 noremap <Esc>l :vertical resize +5<cr>
+
+noremap te :tabe<cr>
+noremap th :tabp<cr>
+noremap tH :tabfirst<cr>
+noremap tl :tabn<cr>
+noremap tL :tablast<cr>
 
 map <silent> <Up> gk
 map <silent> <Down> gj
