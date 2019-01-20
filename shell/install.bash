@@ -12,7 +12,7 @@ configureBash() {
 
   ln -svf $PWD/shell/bashrc ~/.bashrc
 
-	ln -svf $PWD/shell/completion ~/.bash/completion
+	ln -svf $PWD/shell/completion ~/.bash
 }
 
 configureBash

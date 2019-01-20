@@ -8,6 +8,8 @@ echo "= = ="
 echo
 
 installPlugins() {
+  local matchit theme
+
 	mkdir -p ~/.vim/{bundle,plugin,colors}
 
 	# Enable cross-brace completion via % key

@@ -8,6 +8,8 @@ echo "= = ="
 echo
 
 installKitty() {
+  local installer
+
   installer=$PWD/terminal/kitty/installer.sh
 
   rm -rf ./terminal/kitty/kitty.app
