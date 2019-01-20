@@ -52,10 +52,22 @@ configureTabCompletion() {
 	done
 }
 
-set -u
+configureRuby() {
+  local chrubySH
+
+	chrubySH=~/.local/share/chruby/chruby.sh
+
+	if [ -f $chrubySH ]; then
+	  #source $chrubySH
+	  echo ' '
+	fi
+}
+
+set -e
 
 setPrompt
 setAliases
 configureTabCompletion
+configureRuby
 
 set +e
