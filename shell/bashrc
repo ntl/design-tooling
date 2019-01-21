@@ -1,5 +1,4 @@
 set -o vi
-set -u
 
 setPrompt() {
   local esc reset background red green yellow blue magenta cyan foreground resetColor user resetUser hostname resetHostname branch resetBranch noBranch resetNoBranch directory resetDirectory displayGitBranch
@@ -58,16 +57,19 @@ configureRuby() {
 	chrubySH=~/.local/share/chruby/chruby.sh
 
 	if [ -f $chrubySH ]; then
-	  #source $chrubySH
-	  echo ' '
+	  set +eu
+
+	  source $chrubySH
+
+		set -eu
 	fi
 }
 
-set -e
+set -eu
 
 setPrompt
 setAliases
 configureTabCompletion
 configureRuby
 
-set +e
+set +eu

@@ -25,4 +25,19 @@ installChruby() {
   make install PREFIX=~/.local
 }
 
+installRubyInstall() {
+  version=0.7.0
+
+	tarball=$installationRoot/ruby-install-$version.tar.gz
+
+	curl -L -o $tarball -z $tarball https://github.com/postmodern/ruby-install/archive/v$version.tar.gz
+
+	tar -C $installationRoot -x -z -f $tarball
+
+	pushd $installationRoot/ruby-install-$version
+
+  make install PREFIX=~/.local
+}
+
 installChruby
+installRubyInstall
