@@ -47,7 +47,7 @@ set statusline=  " Reset status bar
 set statusline+=%f%M\ " File name
 set statusline+=\[%{strlen(&ft)?&ft:'none'}] " File type
 set statusline+=%= " Remainder is right aligned
-set statusline+=\Buffer:\ %-3.3n " Buffer number
+set statusline+=\ \Buffer:\ %-3.3n " Buffer number
 
 source ~/.vim/keyboard_shortcuts.vim
 source ~/.vim/file_types.vim
