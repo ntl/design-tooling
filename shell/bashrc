@@ -73,3 +73,5 @@ configureTabCompletion
 configureRuby
 
 set +eu
+
+source ~/.bashrc.local
