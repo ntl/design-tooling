@@ -35,7 +35,7 @@ set statusline+=\ %-7(%l,%c%V%) " Line/character of cursor position
 
 syntax on
 let base16colorspace=256
-colorscheme base16-solarized-light
+colorscheme base16-tomorrow-night
 
 let mapleader=","
 

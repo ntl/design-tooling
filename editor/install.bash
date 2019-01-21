@@ -17,8 +17,8 @@ installPlugins() {
 	curl -o $matchit -z $matchit https://raw.githubusercontent.com/tmhedberg/matchit/master/plugin/matchit.vim
 
 	# Theme
-	theme=~/.vim/colors/base16-solarized-light.vim
-	curl -o $theme -z $theme https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-light.vim
+	theme=~/.vim/colors/base16-tomorrow-night.vim
+	curl -o $theme -z $theme https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
 
 	# Plugin system
 	if [ -d ~/.vim/bundle/vim-pathogen ]; then
