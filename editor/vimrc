@@ -21,7 +21,8 @@ set wildmode=longest,list
 
 set number
 set ruler
-set spell spelllang=en_us
+set spelllang=en_us
+set nospell
 
 set laststatus=2 " Always show status bar
 set statusline=  " Reset status bar
@@ -74,4 +75,3 @@ autocmd BufNewFile,BufRead *.adoc,*.md,*.txt set wrap
 autocmd BufNewFile,BufRead *.adoc,*.md,*.txt set spell
 
 autocmd BufNewFile,BufRead Vagrantfile,Procfile,Guardfile,Gemfile,gemspec,*.gemspec set filetype=ruby
-
