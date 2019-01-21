@@ -5,6 +5,8 @@ call pathogen#infect()
 runtime plugin/matchit.vim
 runtime plugin/rename.vim
 
+set nocompatible
+
 " Display
 set t_Co=256
 let base16colorspace=256
@@ -15,6 +17,9 @@ set number
 " File management
 set nobackup
 set noswapfile
+filetype on
+filetype indent on
+filetype plugin on
 
 " Split panes
 set splitbelow
