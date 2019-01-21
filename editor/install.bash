@@ -20,6 +20,10 @@ installPlugins() {
 	theme=~/.vim/colors/base16-tomorrow-night.vim
 	curl -o $theme -z $theme https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
 
+	# Rename
+  rename=~/.vim/plugin/rename.vim
+	curl -o $rename -z $rename https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
+
 	# Plugin system
 	if [ -d ~/.vim/bundle/vim-pathogen ]; then
 		git -C ~/.vim/bundle/vim-pathogen pull
@@ -46,6 +50,8 @@ configureVim() {
 	mkdir -p ~/.vim
 
 	ln -svf $PWD/editor/vimrc ~/.vim/vimrc
+	ln -svf $PWD/editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
+	ln -svf $PWD/editor/file_types.vim ~/.vim/file_types.vim
 }
 
 installPlugins
