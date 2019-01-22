@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -eu
+
+source $(dirname $BASH_SOURCE)/git-functions.bash
+
+dependency git-verify-initial-commit
+
+function git-topic-start() {
+  name=$1
+  head=${2:-HEAD}
+
+  git-verify-initial-commit $head
+}
+
+export git-topic-start $@

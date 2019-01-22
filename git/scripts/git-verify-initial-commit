@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -eu
+
+source $(dirname $BASH_SOURCE)/git-functions.bash
+
+function git-verify-initial-commit() {
+  head=${1:-master}
+
+  if $git show-ref --heads --head | grep -q $head; then
+    $git rev-list --max-parents=0 --quiet $head
+  else
+    exec >&2
+
+    echo "Error: \`$head' is not a branch (has an initial commit been added yet?)"
+
+    exit 1
+  fi
+}
+
+export git-verify-initial-commit $@
