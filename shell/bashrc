@@ -45,9 +45,13 @@ setAliases() {
 	alias rb="ruby --disable-gems"
 }
 
-activateTabCompletion() {
+activateCompletion() {
   for script in ~/.bash/completion/*; do
+    set +eu
+
 	  source $script
+
+    set -eu
 	done
 }
 
@@ -77,7 +81,7 @@ set -eu
 
 setPrompt
 setAliases
-activateTabCompletion
+activateCompletion
 activateColorTheme
 configureRuby
 
