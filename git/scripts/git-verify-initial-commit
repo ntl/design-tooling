@@ -5,14 +5,12 @@ set -eu
 source $(dirname $BASH_SOURCE)/git-functions.bash
 
 function git-verify-initial-commit() {
-  head=${1:-master}
+  ref=${1:-HEAD}
 
-  if $git show-ref --heads --head | grep -q $head; then
-    $git rev-list --max-parents=0 --quiet $head
-  else
+  if ! $git rev-parse --quiet HEAD 2>/dev/null >&2; then
     exec >&2
 
-    echo "Error: \`$head' is not a branch (has an initial commit been added yet?)"
+    echo "Error: \`$ref' is not a reference (has an initial commit been added yet?)"
 
     exit 1
   fi

@@ -8,6 +8,7 @@ echo "= = ="
 echo
 
 configure() {
+  git config --replace-all --global core.pager 'less -F'
   git config --replace-all --global alias.s status
   git config --replace-all --global alias.sh show HEAD
   git config --replace-all --global alias.d diff
