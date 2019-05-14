@@ -19,3 +19,5 @@ splitdiff -a ~/Projects/stage/some_patch.diff
 ```
 git fb --force --tree-filter "ls /path/to/some_patch.diff.part* | xargs -I {} sh -c 'git apply --3way --check {} 2>/dev/null && git apply --3way {} || true'"
 ```
+
+Warning: `--3way` sometimes produces diff artifacts

@@ -19,6 +19,7 @@ configure() {
   git config --replace-all --global alias.lg 'log --oneline --decorate --graph'
   git config --replace-all --global alias.r 'rebase --preserve-merges --allow-empty-message'
   git config --replace-all --global alias.ri 'rebase --interactive --preserve-merges --allow-empty-message'
+  git config --replace-all --global alias.rc 'rebase --continue'
   git config --replace-all --global alias.fb 'filter-branch --tag-name-filter cat'
   git config --replace-all --global alias.list-remote-tags 'ls-remote --tags origin'
   git config --replace-all --global alias.empty-commit 'commit --allow-empty --allow-empty-message -m ""'
@@ -33,9 +34,14 @@ installBashCompletion() {
 installScripts() {
   mkdir -p ~/.local/bin
 
-  for script in ./git/scripts/*.bash; do
+  for script in ./git/scripts/*; do
+    if [ -d $script ]; then
+      continue
+    fi
+
     echo $script
-    #ln -svf $PWD/git/scripts/$script ~/.local/bin
+
+    cp --preserve=mode -vf $PWD/$script ~/.local/bin
   done
 }
 
