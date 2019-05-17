@@ -48,6 +48,10 @@ setAliases() {
 	alias trd="tmux attach-session -t"
 }
 
+setEditor() {
+  export EDITOR=vim
+}
+
 activateCompletion() {
   for script in ~/.bash/completion/*; do
     set +eu
@@ -84,6 +88,7 @@ set -eu
 
 setPrompt
 setAliases
+setEditor
 activateCompletion
 activateColorTheme
 configureRuby
