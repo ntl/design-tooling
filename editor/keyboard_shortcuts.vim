@@ -15,10 +15,10 @@ map <F1> 1gt
 map <F2> 2gt
 map <F3> 3gt
 map <F4> 4gt
-map <F5> 5gt
-map <F6> 6gt
-map <F7> 7gt
-map <F8> 8gt
+
+map <F5> :w \| :call system("tmux resize -t1 -y20 && tmux send -t1 !! c-j")<cr>
+map <F6> :w \| :call system("tmux resize -t0 -Z")<cr>
+map <F7> :w \| :call system("tmux resize -t1 -y40")<cr>
 
 map <silent> <Up> gk
 map <silent> <Down> gj

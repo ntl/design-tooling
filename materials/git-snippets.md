@@ -1,5 +1,11 @@
 # Git Snippets
 
+## Rebase a branch onto another, preserving empty commits and empty commit messages
+
+```
+git rebase-structure
+```
+
 ## Try to apply the changes of a particular commit to every tree
 
 ```
