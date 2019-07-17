@@ -34,15 +34,17 @@ installBashCompletion() {
 installScripts() {
   mkdir -p ~/.local/bin
 
-  for script in ./git/scripts/*; do
-    if [ -d $script ]; then
-      continue
-    fi
+  if [ -d ./git/scripts ]; then
+    for script in ./git/scripts/*; do
+      if [ -d $script ]; then
+        continue
+      fi
 
-    echo $script
+      echo $script
 
-    cp --preserve=mode -vf $PWD/$script ~/.local/bin
-  done
+      cp --preserve=mode -vf $PWD/$script ~/.local/bin
+    done
+  fi
 }
 
 configure
