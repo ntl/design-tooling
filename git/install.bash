@@ -15,6 +15,7 @@ configure() {
   git config --replace-all --global alias.dc 'diff --cached'
   git config --replace-all --global alias.dw 'diff --word-diff=color'
   git config --replace-all --global alias.dcw 'diff --cached --word-diff=color'
+  git config --replace-all --global alias.c 'commit'
   git config --replace-all --global alias.ca 'commit --amend'
   git config --replace-all --global alias.lg 'log --oneline --decorate --graph'
   git config --replace-all --global alias.r 'rebase --preserve-merges --allow-empty-message'
