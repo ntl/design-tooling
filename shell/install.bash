@@ -20,7 +20,7 @@ configureBash() {
 }
 
 configureInputRC() {
-  ln -svf $PWD/inputrc ~/.inputrc
+  ln -svf $PWD/shell/inputrc ~/.inputrc
 }
 
 configureBash
