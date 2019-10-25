@@ -1,0 +1,9 @@
+set editing-mode vi
+set completion-ignore-case on
+
+"\e[3~": delete-char
+
+"\C-a": beginning-of-line
+"\C-e": end-of-line
+
+"\C-x\C-r": re-read-init-file
