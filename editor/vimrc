@@ -41,6 +41,9 @@ set nowrap
 " Command line (Ctrl-F)
 set wildmode=longest,list
 
+" Shell
+set shell=bash\ --login
+
 " Spell checking
 set spelllang=en_us
 set nospell

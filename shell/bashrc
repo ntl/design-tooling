@@ -43,9 +43,6 @@ setAliases() {
 	alias copy-settings="for example in settings/*.example; do cp -v \$example settings/\$(basename \$example .example); done"
 
 	alias rb="ruby --disable-gems"
-
-	alias tS="tmux new -s"
-	alias trd="tmux attach-session -t"
 }
 
 setEditor() {
