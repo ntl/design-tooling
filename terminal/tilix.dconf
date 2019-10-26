@@ -2,7 +2,7 @@
 copy-on-select=true
 focus-follow-mouse=true
 prompt-on-close=false
-window-style='disable-csd-hide-toolbar'
+window-style='normal'
 tab-position='bottom'
 
 [keybindings]
