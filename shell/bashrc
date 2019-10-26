@@ -84,6 +84,20 @@ configureRuby() {
 	fi
 }
 
+configureVTE() {
+  vteSH=/etc/profile.d/vte.sh
+
+  if [ -f $vteSH ]; then
+    if [[ ${TILIX_ID:-} ]]; then
+      set +eu
+
+      source $vteSH
+
+      set -eu
+    fi
+  fi
+}
+
 set -eu
 
 setPrompt
@@ -92,6 +106,7 @@ setEditor
 activateCompletion
 activateColorTheme
 configureRuby
+configureVTE
 
 set +eu
 
