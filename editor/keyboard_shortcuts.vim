@@ -17,8 +17,8 @@ map <F3> 3gt
 map <F4> 4gt
 
 map <F5> :!! <cr>
+map <F6> :!ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal test/automated.rb <cr>
 map <C-r> :!ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal % <cr>
-map <C-R> :!ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal test/automated.rb <cr>
 
 map <silent> <Up> gk
 map <silent> <Down> gj
