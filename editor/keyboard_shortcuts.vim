@@ -16,9 +16,7 @@ map <F2> 2gt
 map <F3> 3gt
 map <F4> 4gt
 
-map <F5> :w \| :call system("tmux resize -t1 -y20 && tmux send -t1 !! c-j")<cr>
-map <F6> :w \| :call system("tmux resize -t0 -Z")<cr>
-map <F7> :w \| :call system("tmux resize -t1 -y40")<cr>
+map <F5> :w \| :call system("tilix --action=session-add-down --profile=RunCommand --command 'ruby --disable-gems test/automated.rb'")<cr>
 
 map <silent> <Up> gk
 map <silent> <Down> gj
