@@ -11,10 +11,20 @@ noremap tH :tabfirst<cr>
 noremap tl :tabn<cr>
 noremap tL :tablast<cr>
 
-map <F1> 1gt
-map <F2> 2gt
-map <F3> 3gt
-map <F4> 4gt
+map t1 1gt
+map t2 2gt
+map t3 3gt
+map t4 4gt
+map t5 5gt
+map t6 6gt
+map t7 7gt
+map t8 8gt
+map t9 9gt
+
+map <F1> t1
+map <F2> t2
+map <F3> t3
+map <F4> t4
 
 map <F5> :!! <cr>
 map <F6> :!ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal test/automated.rb <cr>
