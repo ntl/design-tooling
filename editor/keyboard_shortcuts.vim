@@ -16,7 +16,7 @@ map <F2> 2gt
 map <F3> 3gt
 map <F4> 4gt
 
-map <F5> :w \| :call system("tilix --action=session-add-down --profile=RunCommand --command 'ruby --disable-gems test/automated.rb'")<cr>
+map <F5> :w \| :call system("tilix --action=session-add-down --profile=RunCommand --window-style=borderless --command 'ruby --disable-gems test/automated.rb'")<cr>
 
 map <silent> <Up> gk
 map <silent> <Down> gj
