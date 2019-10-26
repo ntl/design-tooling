@@ -42,7 +42,21 @@ setAliases() {
 
 	alias copy-settings="for example in settings/*.example; do cp -v \$example settings/\$(basename \$example .example); done"
 
-	alias rb="ruby --disable-gems"
+	alias rb="ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal"
+
+	alias pg-start="sudo systemctl start postgresql"
+	alias pg-stop="sudo systemctl stop postgresql"
+	alias pg-status="sudo systemctl status postgresql"
+	alias pgup="pg-start"
+	alias pgdown="pg-stop"
+
+	alias redis-start="sudo systemctl start redis-server"
+	alias redis-stop="sudo systemctl stop redis-server"
+	alias redis-status="sudo systemctl status redis-server"
+	alias redisup="redis-start"
+	alias redisdown="redis-stop"
+
+	alias refresh-gems="rm -rf Gemfile.lock gems .bundle && ./install-gems.sh"
 }
 
 setEditor() {
