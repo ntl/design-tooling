@@ -1,0 +1,6 @@
+[legacy/profiles:]
+list=['82334d04-cb8f-4a04-96db-2c5c900ffb7e']
+
+[legacy/profiles:/:82334d04-cb8f-4a04-96db-2c5c900ffb7e]
+font='Fira Mono 16'
+visible-name='Default'

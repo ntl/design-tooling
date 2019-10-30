@@ -1,0 +1,31 @@
+[org/gnome/desktop/input-sources]
+current=uint32 0
+sources=[('xkb', 'us+dvorak')]
+xkb-options=['ctrl:swapcaps']
+
+[org/gnome/desktop/interface]
+clock-show-weekday=true
+gtk-im-module='gtk-im-context-simple'
+show-battery-percentage=true
+text-scaling-factor=1.0
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='areas'
+tap-to-click=false
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/wm/keybindings]
+minimize=@as []
+move-to-workspace-down=['<Shift><Super>l']
+move-to-workspace-up=['<Shift><Super>h']
+switch-to-workspace-down=['<Super>l']
+switch-to-workspace-up=['<Super>h']
+
+[org/gnome/desktop/wm/preferences]
+focus-mode='sloppy'
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+
+[org/gnome/system/location]
+enabled=true

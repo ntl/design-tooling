@@ -8,7 +8,7 @@ echo "= = ="
 echo
 
 installPlugins() {
-  local matchit theme
+	local matchit theme
 
 	mkdir -p ~/.vim/{bundle,plugin,colors}
 
@@ -21,12 +21,12 @@ installPlugins() {
 	curl -o $theme -z $theme https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
 
 	# Rename
-  rename=~/.vim/plugin/rename.vim
+	rename=~/.vim/plugin/rename.vim
 	curl -o $rename -z $rename https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
 
-  # Tmux Navigator
-  tmux_navigator=~/.vim/plugin/tmux_navigator.vim
-  curl -o $tmux_navigator -z $tmux_navigator https://raw.githubusercontent.com/christoomey/vim-tmux-navigator/master/plugin/tmux_navigator.vim
+	# Tmux Navigator
+	tmux_navigator=~/.vim/plugin/tmux_navigator.vim
+	curl -o $tmux_navigator -z $tmux_navigator https://raw.githubusercontent.com/christoomey/vim-tmux-navigator/master/plugin/tmux_navigator.vim
 
 	# Plugin system
 	if [ -d ~/.vim/bundle/vim-pathogen ]; then

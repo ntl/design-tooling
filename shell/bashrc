@@ -1,20 +1,20 @@
 set -o vi
 
 setPrompt() {
-  local esc reset background red green yellow blue magenta cyan foreground resetColor user resetUser hostname resetHostname branch resetBranch noBranch resetNoBranch directory resetDirectory displayGitBranch
+	local esc reset background red green yellow blue magenta cyan foreground resetColor user resetUser hostname resetHostname branch resetBranch noBranch resetNoBranch directory resetDirectory displayGitBranch
 
-  esc="\033"
+	esc="\033"
 
 	reset="$esc[0m"
 
-  background="$esc[30m"
-  red="$esc[31m"
-  green="$esc[32m"
-  yellow="$esc[33m"
-  blue="$esc[34m"
-  magenta="$esc[35m"
-  cyan="$esc[36m"
-  foreground="$esc[37m"
+	background="$esc[30m"
+	red="$esc[31m"
+	green="$esc[32m"
+	yellow="$esc[33m"
+	blue="$esc[34m"
+	magenta="$esc[35m"
+	cyan="$esc[36m"
+	foreground="$esc[37m"
 	resetColor="$esc[39m"
 
 	user=$blue
@@ -23,7 +23,7 @@ setPrompt() {
 	hostname=$cyan
 	resetHostname=$resetColor
 
-  branch=$green
+	branch=$green
 	resetBranch=$resetColor
 	noBranch="$esc[2;39m"
 	resetNoBranch="$esc[0m"
@@ -31,9 +31,9 @@ setPrompt() {
 	directory=$yellow
 	resetDirectory=$resetColor
 
-  displayGitBranch="(git symbolic-ref --quiet --short HEAD 2>/dev/null || echo -e \"${noBranch}(none)${resetNoBranch}\") | awk \"{ print \\\"(Branch: ${branch}\\\" \\\$0 \\\"${resetBranch})\\\" }\""
+	displayGitBranch="(git symbolic-ref --quiet --short HEAD 2>/dev/null || echo -e \"${noBranch}(none)${resetNoBranch}\") | awk \"{ print \\\"(Branch: ${branch}\\\" \\\$0 \\\"${resetBranch})\\\" }\""
 
-  export PS1="${reset}[${user}\u${resetUser}@${hostname}\h${resetHostname}] \$(${displayGitBranch}) ${directory}\w${resetDirectory}\n> "
+	export PS1="${reset}[${user}\u${resetUser}@${hostname}\h${resetHostname}] \$(${displayGitBranch}) ${directory}\w${resetDirectory}\n> "
 }
 
 setAliases() {
@@ -60,53 +60,23 @@ setAliases() {
 }
 
 setEditor() {
-  export EDITOR=vim
+	export EDITOR=vim
 }
 
 activateCompletion() {
-  for script in ~/.bash/completion/*; do
-    set +eu
-
-	  source $script
-
-    set -eu
+	for script in ~/.bash/completion/*; do
+		set +eu
+		source $script
+		set -eu
 	done
 }
 
 activateColorTheme() {
   set +eu
 
-  source ~/.bash/color_theme.bash
+	source ~/.bash/color_theme.bash
 
-	set -eu
-}
-
-configureRuby() {
-  local chrubySH
-
-	chrubySH=~/.local/share/chruby/chruby.sh
-
-	if [ -f $chrubySH ]; then
-	  set +eu
-
-	  source $chrubySH
-
-		set -eu
-	fi
-}
-
-configureVTE() {
-  vteSH=/etc/profile.d/vte.sh
-
-  if [ -f $vteSH ]; then
-    if [[ ${TILIX_ID:-} ]]; then
-      set +eu
-
-      source $vteSH
-
-      set -eu
-    fi
-  fi
+  set -eu
 }
 
 set -eu
@@ -116,9 +86,11 @@ setAliases
 setEditor
 activateCompletion
 activateColorTheme
-configureRuby
-configureVTE
 
 set +eu
+
+if [ ! -s ~/.bashrc.local ]; then
+	touch ~/.bashrc.local
+fi
 
 source ~/.bashrc.local
