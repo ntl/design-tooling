@@ -42,6 +42,9 @@ setAliases() {
 
 	alias copy-settings="for example in settings/*.example; do cp -v \$example settings/\$(basename \$example .example); done"
 
+  alias copy="xsel --clipboard --input"
+  alias paste="xsel --clipboard --output"
+
 	alias rb="ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal"
 
 	alias pg-start="sudo systemctl start postgresql"
