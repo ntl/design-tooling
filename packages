@@ -2,5 +2,6 @@ git
 libpq-dev
 postgresql
 tmux
+ubuntu-restricted-extras
 vim
 xsel
