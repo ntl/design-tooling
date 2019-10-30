@@ -57,6 +57,10 @@ setAliases() {
 	alias redisdown="redis-stop"
 
 	alias refresh-gems="rm -rf Gemfile.lock gems .bundle && ./install-gems.sh"
+
+	alias tS="tmux new -s"
+	alias trd="tmux attach-session -t"
+	alias tpair="test -S /tmp/pair && tmux -S /tmp/pair attach-session || tmux -S /tmp/pair new -s pair"
 }
 
 setEditor() {
