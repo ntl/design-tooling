@@ -1,4 +1,6 @@
 git
+libpq-dev
+postgresql
 tmux
 vim
 xsel
