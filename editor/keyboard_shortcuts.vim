@@ -26,9 +26,12 @@ map <F2> t2
 map <F3> t3
 map <F4> t4
 
-map <F5> :!! <cr>
-map <F6> :!ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal test/automated.rb <cr>
-map <C-r> :!ruby --disable-gems --disable-did_you_mean --enable-frozen-string-literal % <cr>
+map <f5> :w \| :call system("tmux resize-pane -t1 -y20 && tmux send -t1 !! c-j")<cr>
+imap <f5> <esc> <f5>
+map <f6> :w \| :call system("tmux resize-pane -t0 -Z")<cr>
+imap <f6> <esc> <f6>
+map <f7> :w \| :call system("tmux resize-pane -t1 -y40")<cr>
+imap <f7> <esc> <f7>
 
 map <silent> <Up> gk
 map <silent> <Down> gj
