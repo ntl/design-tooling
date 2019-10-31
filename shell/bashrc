@@ -78,14 +78,6 @@ activateCompletion() {
 	done
 }
 
-activateColorTheme() {
-  set +eu
-
-	source ~/.bash/color_theme.bash
-
-  set -eu
-}
-
 set -eu
 
 setPrompt
@@ -96,8 +88,6 @@ activateColorTheme
 
 set +eu
 
-if [ ! -s ~/.bashrc.local ]; then
-	touch ~/.bashrc.local
+if [ -s ~/.bashrc.local ]; then
+  source ~/.bashrc.local
 fi
-
-source ~/.bashrc.local

@@ -14,9 +14,12 @@ configureBash() {
 
 	ln -svf $PWD/shell/completion ~/.bash
 
-	theme_file=~/.bash/color_theme.bash
+	curl -o ~/.bash/base16-tomorrow.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow.sh
+	curl -o ~/.bash/base16-tomorrow-night.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow-night.sh
 
-	curl -o $theme_file https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow-night.sh
+  if [ ! -s ~/.bashrc.local ]; then
+    cp -v $PWD/shell/bashrc.local.default ~/.bashrc.local
+  fi
 }
 
 configureBash

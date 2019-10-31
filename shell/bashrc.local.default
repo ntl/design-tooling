@@ -1,0 +1,7 @@
+source ~/.bash/base16-tomorrow-night.sh
+
+export LIBRARIES_HOME=~/Projects/libraries
+export PROJECTS_HOME=~/Projects/eventide-project
+export POSTURE=development
+
+export PGDATABASE=postgres

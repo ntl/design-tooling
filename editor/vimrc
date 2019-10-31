@@ -11,7 +11,6 @@ set nocompatible
 set t_Co=256
 let base16colorspace=256
 syntax on
-colorscheme base16-tomorrow-night
 set number
 
 " File management
@@ -59,3 +58,7 @@ set statusline+=\ \Buffer:\ %-3.3n " Buffer number
 
 source ~/.vim/keyboard_shortcuts.vim
 source ~/.vim/file_types.vim
+
+if filereadable(glob("~/.vim/vimrc.local"))
+  source ~/.vim/vimrc.local
+endif

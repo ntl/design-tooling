@@ -13,20 +13,17 @@ installPlugins() {
 	mkdir -p ~/.vim/{bundle,plugin,colors}
 
 	# Enable cross-brace completion via % key
-	matchit=~/.vim/plugin/matchit.vim
-	curl -o $matchit -z $matchit https://raw.githubusercontent.com/tmhedberg/matchit/master/plugin/matchit.vim
+	curl -o ~/.vim/plugin/matchit.vim https://raw.githubusercontent.com/tmhedberg/matchit/master/plugin/matchit.vim
 
-	# Theme
-	theme=~/.vim/colors/base16-tomorrow-night.vim
-	curl -o $theme -z $theme https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
+	# Themes
+	curl -o ~/.vim/colors/base16-tomorrow.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow.vim
+	curl -o ~/.vim/colors/base16-tomorrow-night.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
 
 	# Rename
-	rename=~/.vim/plugin/rename.vim
-	curl -o $rename -z $rename https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
+	curl -o ~/.vim/plugin/rename.vim https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
 
 	# Tmux Navigator
-	tmux_navigator=~/.vim/plugin/tmux_navigator.vim
-	curl -o $tmux_navigator -z $tmux_navigator https://raw.githubusercontent.com/christoomey/vim-tmux-navigator/master/plugin/tmux_navigator.vim
+	curl -o ~/.vim/plugin/tmux_navigator.vim https://raw.githubusercontent.com/christoomey/vim-tmux-navigator/master/plugin/tmux_navigator.vim
 
 	# Plugin system
 	if [ -d ~/.vim/bundle/vim-pathogen ]; then
@@ -56,6 +53,10 @@ configureVim() {
 	ln -svf $PWD/editor/vimrc ~/.vim/vimrc
 	ln -svf $PWD/editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
 	ln -svf $PWD/editor/file_types.vim ~/.vim/file_types.vim
+
+  if [ ! -s ~/.vim/vimrc.local ]; then
+    cp -v $PWD/editor/vimrc.local.default ~/.vim/vimrc.local
+  fi
 }
 
 installPlugins
