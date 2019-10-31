@@ -33,3 +33,6 @@ night-light-enabled=true
 
 [org/gnome/system/location]
 enabled=true
+
+[mutter]
+dynamic-workspaces=false
