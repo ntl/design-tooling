@@ -84,7 +84,6 @@ setPrompt
 setAliases
 setEditor
 activateCompletion
-activateColorTheme
 
 set +eu
 
