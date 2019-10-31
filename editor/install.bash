@@ -18,6 +18,8 @@ installPlugins() {
 	# Themes
 	curl -o ~/.vim/colors/base16-tomorrow.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow.vim
 	curl -o ~/.vim/colors/base16-tomorrow-night.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
+	curl -o ~/.vim/colors/base16-solarized-light.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-light.vim
+	curl -o ~/.vim/colors/base16-solarized-dark.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-dark.vim
 
 	# Rename
 	curl -o ~/.vim/plugin/rename.vim https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
