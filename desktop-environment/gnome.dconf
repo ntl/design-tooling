@@ -1,3 +1,6 @@
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
 [org/gnome/desktop/input-sources]
 current=uint32 0
 sources=[('xkb', 'us+dvorak')]
@@ -28,11 +31,11 @@ switch-to-workspace-right=['<Super>l']
 [org/gnome/desktop/wm/preferences]
 focus-mode='sloppy'
 
+[org/gnome/mutter]
+dynamic-workspaces=false
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
 
 [org/gnome/system/location]
 enabled=true
-
-[mutter]
-dynamic-workspaces=false
