@@ -87,6 +87,6 @@ activateCompletion
 
 set +eu
 
-if [ -s ~/.bashrc.local ]; then
-  source ~/.bashrc.local
+if [ -s ~/.bash_profile.local ]; then
+  source ~/.bash_profile.local
 fi
