@@ -3,6 +3,6 @@ list=['82334d04-cb8f-4a04-96db-2c5c900ffb7e']
 
 [legacy/profiles:/:82334d04-cb8f-4a04-96db-2c5c900ffb7e]
 cursor-colors-set=false
-font='Fira Mono 16'
+font='Fira Mono 18'
 highlight-colors-set=false
 visible-name='Default'
