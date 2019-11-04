@@ -35,5 +35,14 @@ installBashCompletion() {
 	curl -o $git_completion -z $git_completion https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 }
 
+installPrintGitBranch() {
+	print_git_ref=~/.local/bin/print-git-ref
+
+  mkdir -p $(dirname $print_git_ref)
+
+  ln -svf $PWD/git/print-git-ref.bash $print_git_ref
+}
+
 configure
 installBashCompletion
+installPrintGitBranch

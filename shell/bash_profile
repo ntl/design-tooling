@@ -1,7 +1,9 @@
+source ~/.bashrc
+
 set -o vi
 
 setPrompt() {
-	local esc reset background red green yellow blue magenta cyan foreground resetColor user resetUser hostname resetHostname branch resetBranch noBranch resetNoBranch directory resetDirectory displayGitBranch
+	local esc reset background red green yellow blue magenta cyan foreground resetColor user resetUser hostname resetHostname directory resetDirectory
 
 	esc="\033"
 
@@ -23,17 +25,10 @@ setPrompt() {
 	hostname=$cyan
 	resetHostname=$resetColor
 
-	branch=$green
-	resetBranch=$resetColor
-	noBranch="$esc[2;39m"
-	resetNoBranch="$esc[0m"
-
 	directory=$yellow
 	resetDirectory=$resetColor
 
-	displayGitBranch="(git symbolic-ref --quiet --short HEAD 2>/dev/null || echo -e \"${noBranch}(none)${resetNoBranch}\") | awk \"{ print \\\"(Branch: ${branch}\\\" \\\$0 \\\"${resetBranch})\\\" }\""
-
-	export PS1="${reset}[${user}\u${resetUser}@${hostname}\h${resetHostname}] \$(${displayGitBranch}) ${directory}\w${resetDirectory}\n> "
+	export PS1="${reset}[${user}\u${resetUser}@${hostname}\h${resetHostname}] ${directory}\w${resetDirectory}\n> "
 }
 
 setAliases() {
@@ -78,12 +73,17 @@ activateCompletion() {
 	done
 }
 
-set -eu
-
 setPrompt
+unset -f setPrompt
+
 setAliases
+unset -f setAliases
+
 setEditor
+unset -f setEditor
+
 activateCompletion
+unset -f activateCompletion
 
 set +eu
 

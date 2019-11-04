@@ -10,6 +10,7 @@ echo
 configureBash() {
 	mkdir -p ~/.bash
 
+  ln -svf $PWD/shell/bashrc ~/.bashrc
   ln -svf $PWD/shell/bash_profile ~/.bash_profile
 
 	ln -svf $PWD/shell/completion ~/.bash

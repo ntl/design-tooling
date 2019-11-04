@@ -1,0 +1,9 @@
+set -eu
+
+localBinDirectory=~/.local/bin
+
+if [[ ! $PATH =~ $localBinDirectory ]]; then
+  export PATH=$PATH:$localBinDirectory
+fi
+
+set +eu
