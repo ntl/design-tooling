@@ -9,7 +9,7 @@ setPrompt() {
 
 	reset="$esc[0m"
 
-	export PS1="${reset}$esc[1;36m\w$esc[22;39m > "
+	export PS1="${reset}$esc[1;33m\w$esc[22;39m > "
 }
 
 setAliases() {
