@@ -8,9 +8,16 @@ echo "= = ="
 echo
 
 configure() {
+  if ! git config --global user.name; then
+    git config --replace-all --global user.name "Nathan Ladd"
+  fi
+
+  if ! git config --global user.email; then
+    git config --replace-all --global user.email "nathanladd@gmail.com"
+  fi
+
 	git config --replace-all --global core.pager 'less -F'
-	git config --replace-all --global user.name "Nathan Ladd"
-	git config --replace-all --global user.email "nathanladd@gmail.com"
+
 	git config --replace-all --global alias.s status
 	git config --replace-all --global alias.sh show HEAD
 	git config --replace-all --global alias.d diff
