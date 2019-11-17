@@ -2,14 +2,25 @@ source ~/.bashrc
 
 set -o vi
 
-setPrompt() {
+printPrompt() {
 	local esc reset
 
 	esc="\033"
 
-	reset="$esc[0m"
+	relativePath=$(dirs)
+	absolutePath=$PWD
 
-	export PS1="\[${reset}\]\[$esc[1;33m\]\w\[$esc[22;39m\] > "
+	echo -e -n "$esc[0m$esc[1;33m$relativePath$esc[22;39m"
+
+	if [ $relativePath != $absolutePath ]; then
+		echo -e -n " $esc[2;3m($absolutePath)$esc[22;23m"
+	fi
+
+	echo -e "\n> "
+}
+
+setPrompt() {
+	export PS1="\$(printPrompt)"
 }
 
 setAliases() {
