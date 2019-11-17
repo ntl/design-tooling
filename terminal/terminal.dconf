@@ -5,4 +5,5 @@ list=['82334d04-cb8f-4a04-96db-2c5c900ffb7e']
 cursor-colors-set=false
 font='Fira Mono 18'
 highlight-colors-set=false
+login-shell=true
 visible-name='Default'
