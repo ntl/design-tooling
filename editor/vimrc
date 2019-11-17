@@ -68,3 +68,5 @@ let &t_Cs="\e[4:3;58:5:1m"
 let &t_Ce="\e[4:0;59m"
 hi SpellBad ctermbg=NONE
 hi SpellCap ctermbg=NONE
+hi SpellRare ctermbg=NONE
+hi SpellLocal ctermbg=NONE
