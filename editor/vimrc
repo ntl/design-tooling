@@ -64,7 +64,7 @@ if filereadable(glob("~/.vim/vimrc.local"))
 endif
 
 " Override theme-specific handling of spelling and capitalization errors
-let &t_Cs="\e[4:3;58:5:1m"
+let &t_Cs="\e[4:3;58:2:204:102:102m"
 let &t_Ce="\e[4:0;59m"
 hi SpellBad ctermbg=NONE
 hi SpellCap ctermbg=NONE
