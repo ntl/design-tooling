@@ -28,7 +28,7 @@ configure() {
 	git config --replace-all --global alias.ca 'commit --amend'
 	git config --replace-all --global alias.lg 'log --oneline --decorate --graph'
 	git config --replace-all --global alias.r 'rebase --preserve-merges --allow-empty-message'
-	git config --replace-all --global alias.ri 'rebase --interactive --preserve-merges --allow-empty-message'
+	git config --replace-all --global alias.ri 'rebase --interactive --rebase-merges --allow-empty-message'
 	git config --replace-all --global alias.rc 'rebase --continue'
 	git config --replace-all --global alias.rebase-structure 'rebase --preserve-merges --keep-empty --allow-empty-message'
 	git config --replace-all --global alias.fb 'filter-branch --tag-name-filter cat'
