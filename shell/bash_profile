@@ -65,6 +65,13 @@ setEditor() {
 	export EDITOR=vim
 }
 
+setTerminalTitle() {
+  terminalTitle=$1
+  shift
+
+  PROMPT_COMMAND='echo -ne "\033]0; $terminalTitle \007"'
+}
+
 activateCompletion() {
 	for script in ~/.bash/completion/*; do
 		set +eu
@@ -84,6 +91,8 @@ unset -f setEditor
 
 activateCompletion
 unset -f activateCompletion
+
+setTerminalTitle Terminal
 
 set +eu
 
