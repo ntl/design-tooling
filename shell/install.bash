@@ -20,6 +20,9 @@ configureBash() {
 	curl -o ~/.bash/base16-solarized-light.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-solarized-light.sh
 	curl -o ~/.bash/base16-solarized-dark.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-solarized-dark.sh
 
+  ln -svf base16-tomorrow-night.sh ~/.bash/dark.sh
+  ln -svf base16-solarized-light.sh ~/.bash/light.sh
+
   if [ ! -s ~/.bash_profile.local ]; then
     cp -v $PWD/shell/bash_profile.local.default ~/.bash_profile.local
   fi

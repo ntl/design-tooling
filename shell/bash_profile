@@ -65,6 +65,10 @@ setEditor() {
 	export EDITOR=vim
 }
 
+setLocale() {
+  export LC_ALL=$LANG
+}
+
 setTerminalTitle() {
   terminalTitle=$1
   shift
@@ -80,6 +84,14 @@ activateCompletion() {
 	done
 }
 
+dark() {
+  source ~/.bash/dark.sh
+}
+
+light() {
+  source ~/.bash/light.sh
+}
+
 setPrompt
 unset -f setPrompt
 
@@ -88,6 +100,9 @@ unset -f setAliases
 
 setEditor
 unset -f setEditor
+
+setLocale
+unset -f setLocale
 
 activateCompletion
 unset -f activateCompletion

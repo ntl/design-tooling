@@ -1,4 +1,4 @@
-source ~/.bash/base16-tomorrow-night.sh
+source ~/.bash/dark.sh
 
 export LIBRARIES_HOME=~/Projects/libraries
 export PROJECTS_HOME=~/Projects/eventide-project
