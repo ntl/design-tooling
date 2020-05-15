@@ -5,3 +5,4 @@
 ./shell/install.bash
 ./editor/install.bash
 ./git/install.bash
+./projects/install.bash

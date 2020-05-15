@@ -1,7 +1,9 @@
 source ~/.bash/dark.sh
 
 export LIBRARIES_HOME=~/Projects/libraries
-export PROJECTS_HOME=~/Projects/eventide-project
+export PROJECTS_HOME=~/Projects
 export POSTURE=development
+
+export ARCHIVED_PROJECTS_HOME=~/Projects/archive
 
 export PGDATABASE=postgres
