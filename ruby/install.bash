@@ -19,3 +19,4 @@ installRubyInstall() {
 }
 
 installRubyInstall
+installRuby

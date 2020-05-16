@@ -1,7 +1,7 @@
 archived_personal_projects=(
-  account-component
   allocation-component
   fizz-buzz-component
+  obsidian-account-component
   release-control
   todo
 )

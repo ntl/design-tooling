@@ -5,4 +5,5 @@
 ./shell/install.bash
 ./editor/install.bash
 ./git/install.bash
+./ruby/install.bash
 ./projects/install.bash
