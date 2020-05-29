@@ -8,4 +8,5 @@ postgresql
 tmux
 ubuntu-restricted-extras
 vim
+v4l-utils
 xsel
