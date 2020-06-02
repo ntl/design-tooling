@@ -9,6 +9,7 @@ archived_personal_projects=(
 personal_projects=(
   actor
   number-serialization
+  pyleglight
   office-electronics
   os-config
   terminal-colors
