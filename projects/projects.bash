@@ -15,6 +15,7 @@ personal_projects=(
   terminal-colors
   terminal-output-styling
   work-logs
+  zephyrus-g14-linux
 )
 
 test_bench_projects=(
