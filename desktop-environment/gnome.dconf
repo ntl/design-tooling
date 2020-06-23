@@ -3,8 +3,7 @@ show-weekdate=true
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-sources=[('xkb', 'us+dvorak')]
-xkb-options=['ctrl:swapcaps']
+xkb-options=['']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=true
@@ -32,7 +31,7 @@ switch-to-workspace-right=['<Super>l']
 focus-mode='sloppy'
 
 [org/gnome/mutter]
-dynamic-workspaces=false
+dynamic-workspaces=true
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
