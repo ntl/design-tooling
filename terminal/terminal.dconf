@@ -6,4 +6,5 @@ cursor-colors-set=false
 font='Fira Mono 18'
 highlight-colors-set=false
 login-shell=true
+use-system-font=false
 visible-name='Default'

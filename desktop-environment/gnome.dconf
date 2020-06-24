@@ -1,10 +1,6 @@
 [org/gnome/desktop/calendar]
 show-weekdate=true
 
-[org/gnome/desktop/input-sources]
-current=uint32 0
-xkb-options=['']
-
 [org/gnome/desktop/interface]
 clock-show-weekday=true
 gtk-im-module='gtk-im-context-simple'
