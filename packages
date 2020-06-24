@@ -1,15 +1,8 @@
 alacarte
-edid-decode
-git
-gnome-shell-extensions
-gnome-tweak-tool
 gnumeric
-libpq-dev
 postgresql
-python-is-python3
-python3-pip
+python
 tmux
-ubuntu-restricted-extras
 vim
-v4l-utils
+ruby
 xsel
