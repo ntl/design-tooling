@@ -3,6 +3,7 @@ gnumeric
 obs-studio
 postgresql
 python
+python-pip
 ruby
 tmux
 ttf-fira-mono
