@@ -36,7 +36,7 @@ installArchAURPackages() {
     git fetch
     git reset --hard origin/master
 
-    makepkg --syncdeps --install
+    makepkg --syncdeps --install --needed
 
     popd
 
