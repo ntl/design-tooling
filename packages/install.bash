@@ -47,3 +47,18 @@ installArchAURPackages() {
 
 installArchPackages
 installArchAURPackages
+
+echo "Configuring scanner"
+echo "- - -"
+echo
+
+hostname=$(lpstat -s | grep MFC-L2700DW | sed -E -n 's|^.*lpd://(.*)/.*$|\1|p')
+echo "Hostname: $hostname"
+
+cmd="sudo brsaneconfig4 -a name=MFC-L2700DW model=MFC-L2700DW nodename=$hostname"
+echo "Command: $cmd"
+
+eval "$cmd"
+
+echo "(done)"
+echo
