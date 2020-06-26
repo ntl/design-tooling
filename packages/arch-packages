@@ -9,6 +9,7 @@ postgresql
 python
 python-pip
 ruby
+sane
 tmux
 ttf-dejavu
 ttf-fira-mono
