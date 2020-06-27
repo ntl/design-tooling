@@ -1,5 +1,8 @@
 discord
 gnumeric
+nvidia-dkms
+nvidia-settings
+nvidia-utils
 obs-studio
 postgresql
 python
