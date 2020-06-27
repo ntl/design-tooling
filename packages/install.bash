@@ -7,6 +7,17 @@ echo "Installing Packages"
 echo "= = ="
 echo
 
+installArchBasePackages() {
+  echo "Installing Arch base packages"
+  echo "- - -"
+  echo
+
+  sudo pacman --sync --needed --refresh $(cat $PWD/packages/arch-base-packages)
+
+  echo "(done)"
+  echo
+}
+
 installArchPackages() {
   echo "Installing Arch packages"
   echo "- - -"
@@ -45,6 +56,7 @@ installArchAURPackages() {
   done
 }
 
+installArchBasePackages
 installArchPackages
 installArchAURPackages
 

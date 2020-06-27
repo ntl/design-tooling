@@ -12,11 +12,10 @@ configureGNOME() {
 }
 
 configureLauncher() {
-  desktop-file-validate $PWD/desktop-environment/firefox-user.desktop
-
   mkdir -p ~/.local/share-applications
 
-  ln -svf $PWD/desktop-environment/firefox-user.desktop ~/.local/share/applications
+  desktop-file-validate $PWD/desktop-environment/firefox.desktop
+  ln -svf $PWD/desktop-environment/firefox.desktop ~/.local/share/applications/firefox.desktop
 }
 
 configureLauncher
