@@ -8,6 +8,7 @@ archived_personal_projects=(
 
 personal_projects=(
   actor
+  gpg
   number-serialization
   pyleglight
   office-electronics
