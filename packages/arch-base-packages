@@ -16,6 +16,7 @@ pulseaudio
 pulseaudio-alsa
 sane
 sudo
+system-config-printer
 systemd-swap
 tar
 texinfo
@@ -23,4 +24,3 @@ xdg-utils
 xorg
 xorg-server
 xsel
-system-config-printer
