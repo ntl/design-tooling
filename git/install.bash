@@ -20,6 +20,10 @@ configure() {
 		git config --replace-all --global user.signingkey "nathanladd@gmail.com"
 	fi
 
+	if ! git config --global commit.gpgsign; then
+		git config --replace-all --global commit.gpgsign "true"
+	fi
+
 	git config --replace-all --global core.pager 'less -F'
 
 	git config --replace-all --global alias.s status
@@ -28,8 +32,8 @@ configure() {
 	git config --replace-all --global alias.dc 'diff --cached'
 	git config --replace-all --global alias.dw 'diff --word-diff=color'
 	git config --replace-all --global alias.dcw 'diff --cached --word-diff=color'
-	git config --replace-all --global alias.c 'commit --gpg-sign'
-	git config --replace-all --global alias.ca 'commit --amend --gpg-sign'
+	git config --replace-all --global alias.c 'commit'
+	git config --replace-all --global alias.ca 'commit --amend'
 	git config --replace-all --global alias.lg 'log --oneline --decorate --graph'
 	git config --replace-all --global alias.r 'rebase --preserve-merges --allow-empty-message'
 	git config --replace-all --global alias.ri 'rebase --interactive --rebase-merges --keep-empty --allow-empty-message'
