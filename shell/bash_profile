@@ -111,6 +111,10 @@ setTerminalTitle Terminal
 
 set +eu
 
+if [ -s ~/.bash/gpg-agent.bash ]; then
+  source ~/.bash/gpg-agent.bash
+fi
+
 if [ -s ~/.bash_profile.local ]; then
   source ~/.bash_profile.local
 fi
