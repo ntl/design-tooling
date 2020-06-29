@@ -54,6 +54,8 @@ installArchAURPackages() {
     echo '(done)'
     echo
   done
+
+	ln -svf /usr/share/applications/packages/dropbox.desktop ~/.config/autostart/dropbox.desktop
 }
 
 installArchBasePackages
