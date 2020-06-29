@@ -5,6 +5,7 @@ chrome-gnome-shell
 clang
 curl
 cups
+git
 gnome
 gnome-software-packagekit-plugin
 gnome-tweak-tool
