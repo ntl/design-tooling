@@ -18,7 +18,9 @@ if [ "$ready" = "0" ]; then
   exit 1
 fi
 
-./packages/install.bash
+if [ "${INSTALL_PACKAGES:-yes}" = "yes" ]; then
+  ./packages/install.bash
+fi
 
 ./desktop-environment/install.bash
 ./git/install.bash
