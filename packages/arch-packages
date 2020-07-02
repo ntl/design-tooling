@@ -12,7 +12,7 @@ riot-desktop
 ruby
 seahorse
 tmux
-ttf-dejavu
 ttf-fira-mono
 vim
 wget
+xsel

@@ -21,7 +21,7 @@ system-config-printer
 systemd-swap
 tar
 texinfo
+ttf-dejavu
 xdg-utils
 xorg
 xorg-server
-xsel
