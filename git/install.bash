@@ -44,12 +44,6 @@ configure() {
 	git config --replace-all --global alias.empty-commit 'commit --allow-empty --allow-empty-message -m ""'
 }
 
-installBashCompletion() {
-	git_completion=~/.bash/completion/git.bash
-
-	curl -o $git_completion -z $git_completion https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-}
-
 installPrintGitBranch() {
 	print_git_ref=~/.local/bin/print-git-ref
 
@@ -59,5 +53,4 @@ installPrintGitBranch() {
 }
 
 configure
-installBashCompletion
 installPrintGitBranch
