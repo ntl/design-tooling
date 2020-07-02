@@ -23,7 +23,7 @@ installArchPackages() {
   echo "- - -"
   echo
 
-  sudo pacman --sync --needed --refresh $(cat $PWD/packages/arch-packages)
+  sudo pacman --sync --needed --refresh --noconfirm $(cat $PWD/packages/arch-packages)
 
   echo "(done)"
   echo
@@ -47,7 +47,7 @@ installArchAURPackages() {
     git fetch
     git reset --hard origin/master
 
-    makepkg --syncdeps --install --skippgpcheck --needed
+    makepkg --syncdeps --install --skippgpcheck --needed --noconfirm
 
     popd
 
