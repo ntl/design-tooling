@@ -12,7 +12,7 @@ installArchBasePackages() {
   echo "- - -"
   echo
 
-  sudo pacman --sync --needed --refresh $(cat $PWD/packages/arch-base-packages)
+  sudo pacman --sync --needed --refresh --ignore gdm --ignore libgdm --ignore epiphany $(cat $PWD/packages/arch-base-packages)
 
   echo "(done)"
   echo
