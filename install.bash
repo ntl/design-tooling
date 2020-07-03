@@ -16,8 +16,6 @@ echo "PROJECTS_HOME: $PROJECTS_HOME"
 echo "ARCHIVED_PROJECTS_HOME: $ARCHIVED_PROJECTS_HOME"
 echo
 
-sudo pacman --sync --refresh --needed
-
 ./packages/install.bash
 
 ./desktop-environment/install.bash
