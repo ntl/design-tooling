@@ -1,0 +1,10 @@
+vulkan-icd-loader
+wine-staging
+winetricks
+lib32-gnutls
+lib32-libgpg-error
+lib32-libldap
+lib32-libpulse
+lib32-nvidia-utils
+lib32-sqlite
+lib32-vulkan-icd-loader
