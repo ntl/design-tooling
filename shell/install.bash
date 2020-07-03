@@ -9,9 +9,9 @@ echo
 
 mkdir -p ~/.bash
 
-ln -svf ./shell/bashrc ~/.bashrc
-ln -svf ./shell/bash_profile ~/.bash_profile
-ln -svf ./shell/completion ~/.bash
+symbolic-link ./shell/bashrc ~/.bashrc
+symbolic-link ./shell/bash_profile ~/.bash_profile
+symbolic-link ./shell/completion ~/.bash
 
 download-file ~/.bash/base16-tomorrow.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow.sh
 download-file ~/.bash/base16-tomorrow-night.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow-night.sh

@@ -19,3 +19,10 @@ download-file() {
   curl $timeCond -o $localPath $remotePath
   echo
 }
+
+symbolic-link() {
+  source=$(realpath $1)
+  target=$2
+
+  ln -svf $source $target
+}

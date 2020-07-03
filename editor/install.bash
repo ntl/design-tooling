@@ -57,9 +57,9 @@ echo
 echo "Linking Configuration"
 echo "- - -"
 
-ln -svf ./editor/vimrc ~/.vim/vimrc
-ln -svf ./editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
-ln -svf ./editor/file_types.vim ~/.vim/file_types.vim
+symbolic-link ./editor/vimrc ~/.vim/vimrc
+symbolic-link ./editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
+symbolic-link ./editor/file_types.vim ~/.vim/file_types.vim
 
 if [ ! -s ~/.vim/vimrc.local ]; then
   cp -v ./editor/vimrc.local.default ~/.vim/vimrc.local

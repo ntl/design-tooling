@@ -43,7 +43,7 @@ echo "- - -"
 echo
 
 if [ ! -L ./packages/aur ]; then
-  ln -svf $AUR_DIR ./packages/aur
+  symbolic-link $AUR_DIR ./packages-aur
   echo
 fi
 

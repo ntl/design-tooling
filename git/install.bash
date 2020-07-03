@@ -36,7 +36,7 @@ print_git_ref=~/.local/bin/print-git-ref
 
 mkdir -p $(dirname $print_git_ref)
 
-ln -svf ./git/print-git-ref.bash $print_git_ref
+symbolic-link ./git/print-git-ref.bash $print_git_ref
 echo
 
 echo "(done)"
