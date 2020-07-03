@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+source ./init.bash
 
 echo
 echo "Configuring Git"
