@@ -5,6 +5,7 @@ obs-studio
 postgresql
 python
 python-pip
+read-edid
 riot-desktop
 ruby
 seahorse

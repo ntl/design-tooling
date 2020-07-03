@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 
-set -eu
+source ./init.bash
 
 echo
 echo "Configuring Desktop Environment"
 echo "= = ="
 echo
 
-configureGNOME() {
-	dconf load / < $PWD/desktop-environment/gnome.dconf
-}
+echo "GNOME dconf"
+echo "- - - "
+dconf load / < ./desktop-environment/gnome.dconf
+echo
 
-configureLauncher() {
-  mkdir -p ~/.local/share-applications
+echo "Firefox"
+echo "- - -"
+desktop-file-validate ./desktop-environment/firefox.desktop
+desktop-file-install --dir=$HOME/.local/share/applications ./desktop-environment/firefox.desktop
+update-desktop-database ~/.local/share/applications
+echo
 
-  desktop-file-validate $PWD/desktop-environment/firefox.desktop
-  ln -svf $PWD/desktop-environment/firefox.desktop ~/.local/share/applications/firefox.desktop
-}
-
-configureLauncher
-configureGNOME
+echo "(done)"
+echo

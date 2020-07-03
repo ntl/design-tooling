@@ -1,31 +1,29 @@
 #!/usr/bin/env bash
 
-set -eu
+source ./init.bash
 
 echo
 echo "Configuring Shell"
 echo "= = ="
 echo
 
-configureBash() {
-	mkdir -p ~/.bash
+mkdir -p ~/.bash
 
-  ln -svf $PWD/shell/bashrc ~/.bashrc
-  ln -svf $PWD/shell/bash_profile ~/.bash_profile
+ln -svf ./shell/bashrc ~/.bashrc
+ln -svf ./shell/bash_profile ~/.bash_profile
+ln -svf ./shell/completion ~/.bash
 
-	ln -svf $PWD/shell/completion ~/.bash
+download-file ~/.bash/base16-tomorrow.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow.sh
+download-file ~/.bash/base16-tomorrow-night.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow-night.sh
+download-file ~/.bash/base16-solarized-light.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-solarized-light.sh
+download-file ~/.bash/base16-solarized-dark.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-solarized-dark.sh
 
-	curl -o ~/.bash/base16-tomorrow.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow.sh
-	curl -o ~/.bash/base16-tomorrow-night.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-tomorrow-night.sh
-	curl -o ~/.bash/base16-solarized-light.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-solarized-light.sh
-	curl -o ~/.bash/base16-solarized-dark.sh https://raw.githubusercontent.com/chriskempson/base16-shell/master/scripts/base16-solarized-dark.sh
+ln -svf base16-tomorrow-night.sh ~/.bash/dark.sh
+ln -svf base16-solarized-light.sh ~/.bash/light.sh
 
-  ln -svf base16-tomorrow-night.sh ~/.bash/dark.sh
-  ln -svf base16-solarized-light.sh ~/.bash/light.sh
+if [ ! -s ~/.bash_profile.local ]; then
+  cp -v ./shell/bash_profile.local.default ~/.bash_profile.local
+fi
 
-  if [ ! -s ~/.bash_profile.local ]; then
-    cp -v $PWD/shell/bash_profile.local.default ~/.bash_profile.local
-  fi
-}
-
-configureBash
+echo "(done)"
+echo

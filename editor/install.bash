@@ -1,65 +1,69 @@
 #!/usr/bin/env bash
 
-set -eu
+source ./init.bash
 
 echo
 echo "Configuring Editor (Vim)"
 echo "= = ="
 echo
 
-installPlugins() {
-	local matchit theme
+echo "Installing Plugins"
+echo "- - -"
+echo
 
-	mkdir -p ~/.vim/{bundle,plugin,colors}
+mkdir -p ~/.vim/{bundle,plugin,colors}
 
-	# Enable cross-brace completion via % key
-	curl -o ~/.vim/plugin/matchit.vim https://raw.githubusercontent.com/tmhedberg/matchit/master/plugin/matchit.vim
+# Enable cross-brace completion via % key
+download-file ~/.vim/plugin/matchit.vim https://raw.githubusercontent.com/tmhedberg/matchit/master/plugin/matchit.vim
 
-	# Themes
-	curl -o ~/.vim/colors/base16-tomorrow.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow.vim
-	curl -o ~/.vim/colors/base16-tomorrow-night.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
-	curl -o ~/.vim/colors/base16-solarized-light.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-light.vim
-	curl -o ~/.vim/colors/base16-solarized-dark.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-dark.vim
+# Themes
+download-file ~/.vim/colors/base16-tomorrow.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow.vim
+download-file ~/.vim/colors/base16-tomorrow-night.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-tomorrow-night.vim
+download-file ~/.vim/colors/base16-solarized-light.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-light.vim
+download-file ~/.vim/colors/base16-solarized-dark.vim https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-solarized-dark.vim
 
-	# Rename
-	curl -o ~/.vim/plugin/rename.vim https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
+# Rename
+download-file ~/.vim/plugin/rename.vim https://raw.githubusercontent.com/danro/rename.vim/master/plugin/rename.vim
 
-	# Tmux Navigator
-	curl -o ~/.vim/plugin/tmux_navigator.vim https://raw.githubusercontent.com/christoomey/vim-tmux-navigator/master/plugin/tmux_navigator.vim
+# Tmux Navigator
+download-file ~/.vim/plugin/tmux_navigator.vim https://raw.githubusercontent.com/christoomey/vim-tmux-navigator/master/plugin/tmux_navigator.vim
 
-	# Plugin system
-	if [ -d ~/.vim/bundle/vim-pathogen ]; then
-		git -C ~/.vim/bundle/vim-pathogen pull
-	else
-		git clone --depth 1 https://github.com/tpope/vim-pathogen ~/.vim/bundle/vim-pathogen
-	fi
+unset -f download-file
 
-	# File browser
-	if [ -d ~/.vim/bundle/nerdtree ]; then
-		git -C ~/.vim/bundle/nerdtree pull
-	else
-		git clone --depth 1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-	fi
+# Plugin system
+if [ -d ~/.vim/bundle/vim-pathogen ]; then
+  git -C ~/.vim/bundle/vim-pathogen pull
+else
+  git clone --depth 1 https://github.com/tpope/vim-pathogen ~/.vim/bundle/vim-pathogen
+fi
 
-	# Ruby integration
-	if [ -d ~/.vim/bundle/vim-ruby ]; then
-		git -C ~/.vim/bundle/vim-ruby pull
-	else
-		git clone --depth 1 https://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
-	fi
-}
+# File browser
+if [ -d ~/.vim/bundle/nerdtree ]; then
+  git -C ~/.vim/bundle/nerdtree pull
+else
+  git clone --depth 1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+fi
 
-configureVim() {
-	mkdir -p ~/.vim
+# Ruby integration
+if [ -d ~/.vim/bundle/vim-ruby ]; then
+  git -C ~/.vim/bundle/vim-ruby pull
+else
+  git clone --depth 1 https://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
+fi
 
-	ln -svf $PWD/editor/vimrc ~/.vim/vimrc
-	ln -svf $PWD/editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
-	ln -svf $PWD/editor/file_types.vim ~/.vim/file_types.vim
+echo "(done)"
+echo
 
-  if [ ! -s ~/.vim/vimrc.local ]; then
-    cp -v $PWD/editor/vimrc.local.default ~/.vim/vimrc.local
-  fi
-}
+echo "Linking Configuration"
+echo "- - -"
 
-installPlugins
-configureVim
+ln -svf ./editor/vimrc ~/.vim/vimrc
+ln -svf ./editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
+ln -svf ./editor/file_types.vim ~/.vim/file_types.vim
+
+if [ ! -s ~/.vim/vimrc.local ]; then
+  cp -v ./editor/vimrc.local.default ~/.vim/vimrc.local
+fi
+
+echo "(done)"
+echo

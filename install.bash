@@ -1,30 +1,28 @@
 #!/bin/bash
 
-set -eu
+source ./init.bash
 
-ready=1
+echo
+echo "Configuring Operating System"
+echo "= = ="
+echo
 
-if [ "${PROJECTS_HOME:-}" = "" ]; then
-  echo "ERROR: PROJECTS_HOME is not set"
-  ready=0
-fi
+echo "Kernel: $(uname -a)"
+echo "Core Count: $(nproc)"
+echo
+echo "MAKEFLAGS: $MAKEFLAGS"
+echo "AUR_DIR: $AUR_DIR"
+echo "PROJECTS_HOME: $PROJECTS_HOME"
+echo "ARCHIVED_PROJECTS_HOME: $ARCHIVED_PROJECTS_HOME"
+echo
 
-if [ "${ARCHIVED_PROJECTS_HOME:-}" = "" ]; then
-  echo "ERROR: ARCHIVED_PROJECTS_HOME is not set"
-  ready=0
-fi
+sudo pacman --sync --refresh --needed
 
-if [ "$ready" = "0" ]; then
-  exit 1
-fi
-
-if [ "${INSTALL_PACKAGES:-yes}" = "yes" ]; then
-  ./packages/install.bash
-fi
+./packages/install.bash
 
 ./desktop-environment/install.bash
 ./git/install.bash
 ./editor/install.bash
-./projects/install.bash
 ./shell/install.bash
 ./terminal/install.bash
+./projects/install.bash

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-set -eu
+source ./init.bash
 
-source projects/projects.bash
+source ./projects/projects.bash
 
 personalGitAuthority="git@github.com:ntl"
 testBenchGitAuthority="git@github.com:test-bench"
