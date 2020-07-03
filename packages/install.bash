@@ -11,13 +11,12 @@ echo "Installing Arch base packages"
 echo "- - -"
 echo
 
-yes n | \
-  sudo pacman \
-    --sync \
-    --needed \
-    --color auto \
-    --ignore gdm,libgdm,epiphany \
-    $(cat ./packages/arch-base-packages)
+sudo pacman \
+  --sync \
+  --needed \
+  --color auto \
+  --ignore gdm,libgdm,epiphany \
+  $(cat ./packages/arch-base-packages)
 
 echo "(done)"
 echo
@@ -43,7 +42,7 @@ echo "- - -"
 echo
 
 if [ ! -L ./packages/aur ]; then
-  symbolic-link $AUR_DIR ./packages-aur
+  symbolic-link $AUR_DIR ./packages/aur
   echo
 fi
 
