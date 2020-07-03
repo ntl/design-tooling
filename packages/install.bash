@@ -49,7 +49,7 @@ fi
 for packageName in $(cat ./packages/arch-aur-packages); do
   echo "Package: $packageName"
 
-  if pacman --query --quiet $packageName 2>&1 >/dev/null; then
+  if pacman --query --quiet $packageName >/dev/null 2>&1; then
     echo "(already installed; skipping)"
     echo
     continue
