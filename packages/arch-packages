@@ -11,6 +11,7 @@ ruby
 seahorse
 tmux
 ttf-fira-mono
+v4l-utils
 vim
 wget
 xsel
