@@ -59,6 +59,9 @@ setAliases() {
 	alias tS="tmux new -s"
 	alias trd="tmux attach-session -t"
 	alias tpair="test -S /tmp/pair && tmux -S /tmp/pair attach-session || tmux -S /tmp/pair new -s pair"
+
+	alias show-all-problems="journalctl -xe"
+	alias show-problems="journalctl -xe -u"
 }
 
 setEditor() {
