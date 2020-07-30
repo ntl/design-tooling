@@ -9,8 +9,8 @@ archived_personal_projects=(
 personal_projects=(
   actor
   gpg
+  mruby-ruby-cross-compat
   number-serialization
-  pyleglight
   office-electronics
   os-config
   terminal-colors
