@@ -26,4 +26,5 @@ test_bench_projects=(
   test-bench-example
   test-bench-fixture
   test-bench.software
+  mruby-ruby-compat
 )
