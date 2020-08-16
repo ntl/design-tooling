@@ -19,6 +19,5 @@ echo
 ./desktop-environment/install.bash
 ./git/install.bash
 ./editor/install.bash
-./shell/install.bash
 ./terminal/install.bash
 ./projects/install.bash
