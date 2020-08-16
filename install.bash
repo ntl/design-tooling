@@ -16,8 +16,6 @@ echo "PROJECTS_HOME: $PROJECTS_HOME"
 echo "ARCHIVED_PROJECTS_HOME: $ARCHIVED_PROJECTS_HOME"
 echo
 
-./packages/install.bash
-
 ./desktop-environment/install.bash
 ./git/install.bash
 ./editor/install.bash
