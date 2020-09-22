@@ -44,11 +44,18 @@ else
   git clone --depth 1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 fi
 
-# Ruby integration
+# Ruby
 if [ -d ~/.vim/bundle/vim-ruby ]; then
   git -C ~/.vim/bundle/vim-ruby pull
 else
   git clone --depth 1 https://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
+fi
+
+# Terraform
+if [ -d ~/.vim/bundle/vim-terraform ]; then
+  git -C ~/.vim/bundle/vim-terraform pull
+else
+  git clone --depth 1 https://github.com/hashivim/vim-terraform.git ~/.vim/bundle/vim-terraform
 fi
 
 echo "(done)"
