@@ -9,6 +9,7 @@ postgresql
 read-edid
 ruby
 seahorse
+terraform
 tmux
 ttf-fira-mono
 v4l-utils
