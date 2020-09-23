@@ -14,6 +14,7 @@ personal_projects=(
   os-config
   terminal-colors
   terminal-output-styling
+  terminal-setup
   work-logs
   zephyrus-g14-linux
 )
