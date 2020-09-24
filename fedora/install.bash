@@ -3,6 +3,7 @@
 set -eu
 
 sudo dnf install \
+  dropbox \
   mozilla-fira-mono-fonts \
   ruby \
   vim-enhanced
