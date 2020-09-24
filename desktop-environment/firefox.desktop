@@ -4,7 +4,7 @@ Name=Firefox
 GenericName=Web Browser
 Comment=Browse the World Wide Web
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=/usr/lib/firefox/firefox -P default-release %u
+Exec=/usr/bin/firefox -P default-release %u
 Icon=firefox
 Terminal=false
 X-MultipleArgs=false
@@ -18,14 +18,14 @@ Actions=new-window;new-private-window;profile-manager;
 [Desktop Action new-window]
 Name=Firefox
 Name[en_US]=New Window
-Exec=/usr/lib/firefox/firefox --new-window -P default-release %u
+Exec=/usr/bin/firefox --new-window -P default-release %u
 
 [Desktop Action new-private-window]
 Name=New Private Window
 Name[en_US]=New Private Window
-Exec=/usr/lib/firefox/firefox --private-window -P default-release %u
+Exec=/usr/bin/firefox --private-window -P default-release %u
 
 [Desktop Action profile-manager]
 Name=New Window (Select Profile)
 Name[en_US]=New Window (Select Profile)
-Exec=/usr/lib/firefox/firefox --ProfileManager --new-window %u
+Exec=/usr/bin/firefox --ProfileManager --new-window %u
