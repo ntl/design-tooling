@@ -7,6 +7,7 @@ sudo dnf install \
   mozilla-fira-mono-fonts \
   mozilla-fira-sans-fonts \
   ruby \
+  v4l-utils \
   vim-enhanced
 
 sudo dnf groupinstall "Development Tools" "Development Libraries"
