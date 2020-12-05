@@ -41,7 +41,7 @@ dynamic-workspaces=true
 night-light-enabled=true
 
 [org/gnome/shell]
-favorite-apps = ['firefox.desktop', 'gnome-terminal.desktop', 'nautilus.desktop', 'gedit.desktop', 'gnumeric.desktop', 'slack.desktop', 'discord.desktop', 'Zoom.desktop', 'com.obsproject.Studio.desktop', 'nvidia-settings.desktop']
+favorite-apps = ['firefox.desktop', 'gnome-terminal.desktop', 'nautilus.desktop', 'gedit-local.desktop', 'gnumeric.desktop', 'slack.desktop', 'discord.desktop', 'Zoom.desktop', 'com.obsproject.Studio.desktop', 'nvidia-settings.desktop']
 
 [org/gnome/system/location]
 enabled=true

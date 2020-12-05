@@ -16,8 +16,15 @@ echo "Firefox"
 echo "- - -"
 desktop-file-validate ./desktop-environment/firefox.desktop
 desktop-file-install --dir=$HOME/.local/share/applications ./desktop-environment/firefox.desktop
-update-desktop-database ~/.local/share/applications
 echo
+
+echo "GEdit (Local)"
+echo "- - -"
+desktop-file-validate ./desktop-environment/gedit-local.desktop
+desktop-file-install --dir=$HOME/.local/share/applications ./desktop-environment/gedit-local.desktop
+echo
+
+update-desktop-database ~/.local/share/applications
 
 echo "(done)"
 echo

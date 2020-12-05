@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GEdit (Local)
+Comment=Launch editor in current directory
+Exec=gedit --standalone
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+# TRANSLATORS: Do NOT translate or transliterate this text!
+#              This is an icon file name.
+Icon=org.gnome.gedit
+Categories=GNOME;GTK;Utility;TextEditor;
