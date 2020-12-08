@@ -74,3 +74,12 @@ fi
 
 echo "(done)"
 echo
+
+echo "Configuring GEdit"
+echo "- - -"
+
+mkdir -p ~/.local/share/gedit/plugins
+git -C ~/.local/share/gedit/plugins clone --depth 1 https://github.com/hardpixel/gedit-strip-whitespace
+
+echo "(done)"
+echo "- - -"
