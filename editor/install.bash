@@ -61,12 +61,12 @@ fi
 echo "(done)"
 echo
 
-echo "Linking Configuration"
+echo "Copying Configuration"
 echo "- - -"
 
-symbolic-link ./editor/vimrc ~/.vim/vimrc
-symbolic-link ./editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
-symbolic-link ./editor/file_types.vim ~/.vim/file_types.vim
+cp -v ./editor/vimrc ~/.vim/vimrc
+cp -v ./editor/keyboard_shortcuts.vim ~/.vim/keyboard_shortcuts.vim
+cp -v ./editor/file_types.vim ~/.vim/file_types.vim
 
 if [ ! -s ~/.vim/vimrc.local ]; then
   cp -v ./editor/vimrc.local.default ~/.vim/vimrc.local
@@ -74,12 +74,3 @@ fi
 
 echo "(done)"
 echo
-
-echo "Configuring GEdit"
-echo "- - -"
-
-mkdir -p ~/.local/share/gedit/plugins
-git -C ~/.local/share/gedit/plugins clone --depth 1 https://github.com/hardpixel/gedit-strip-whitespace
-
-echo "(done)"
-echo "- - -"
